@@ -20,12 +20,12 @@ const routes: Routes = [
   },
   {
     path:'',
-    redirectTo:'/home',
+    redirectTo:'/register',
     pathMatch:'full'
   },
   {
     path:'**',
-    redirectTo:'/home',
+    redirectTo:'/register',
     pathMatch:'full'
   }
 ];

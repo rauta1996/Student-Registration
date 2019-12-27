@@ -20,13 +20,12 @@ export class HomeComponent implements OnInit {
     });
    }
 
-  data:any=[]
+  data:any=[];
 
-  ngOnInit() {
+  ngOnInit() {}
+  
+  onSave(value){
+    this.data.push(this.homeForm.value);
+    return localStorage.setItem('StudentData', value);
   }
-  onSave(){
-    console.log(this.homeForm.value)
-    this.data.push(this.homeForm.value)
-  }
-
 }

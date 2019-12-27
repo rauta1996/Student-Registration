@@ -9,7 +9,7 @@
 
             <div class="form-group">
                <label>Student Name</label>
-               <input type="text" class="form-control" formControlName="sname" id="sname">
+               <input type="text" class="form-control" formControlName="sname">
             </div>
 
             <div class="form-group">
@@ -37,7 +37,7 @@
                <input type="text" class="form-control" formControlName="country">
             </div>
 
-            <button type="submit" class="btn btn-success" (click)="onSave()">Save</button>
+            <button type="submit" class="btn btn-success">Save</button>
             <button type="reset" class="btn btn-danger">Cancel</button>
          </form>
       </div>
@@ -52,11 +52,15 @@
                <th>Enrollment Year</th>
                <th>City</th>
                <th>Country</th>
-               <th><a href="#"><button class="btn btn-info">Edit</button></a></th>
-               <th><a href="#"><button class="btn btn-danger">Delete</button></a></th>
             </thead>
-            <tbody ngFor="let elem of data">
-               <td>{{data.id}}</td>
+            <tbody *ngFor="let elem of data">
+               <td>{{elem.id}}</td>
+               <td>{{elem.sname}}</td>
+               <td>{{elem.email}}</td>
+               <td>{{elem.class}}</td>
+               <td>{{elem.year}}</td>
+               <td>{{elem.city}}</td>
+               <td>{{elem.country}}</td>
             </tbody>
          </table>
       </div>

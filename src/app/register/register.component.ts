@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
     public authService: AuthService) {
     this.registForm = this.fb.group({
       firstname:['',Validators.required],
+      midname:[''],
       lastname:['',Validators.required],
       email:['',Validators.required],
       phone:['',Validators.required],
