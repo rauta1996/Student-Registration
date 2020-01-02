@@ -27,8 +27,9 @@ export class HomeComponent implements OnInit {
   onSave(value){
     this.data.push(this.homeForm.value);
     return localStorage.setItem('StudentData', value);
-  }
-  userData(){
     this.homeForm.reset();
+  }
+  userData(data){
+    console.log(data)
   }
 }
