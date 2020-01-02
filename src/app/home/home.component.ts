@@ -28,4 +28,7 @@ export class HomeComponent implements OnInit {
     this.data.push(this.homeForm.value);
     return localStorage.setItem('StudentData', value);
   }
+  userData(){
+    this.homeForm.reset();
+  }
 }
